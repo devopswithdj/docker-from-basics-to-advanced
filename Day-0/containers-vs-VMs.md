@@ -74,6 +74,12 @@ Before you touch Docker, understand **why containers exist**, how they’re diff
 So instead of running *a full OS per app*, containers **share the host OS kernel** but stay logically isolated.
 
 ---
+## 🖼️ VM vs Container Architecture Diagram
+
+![Virtual Machine vs Container Architecture](../assets/images/containerVsVM.png)
+
+---
+
 
 ## 📂 4. Files Shared vs Not Shared
 
