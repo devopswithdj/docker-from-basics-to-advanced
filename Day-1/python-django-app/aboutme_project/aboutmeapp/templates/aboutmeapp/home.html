@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Me - {{ name }}</title>
+    <style>
+        body {
+            font-family: "Segoe UI", sans-serif;
+            margin: 40px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: auto;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 { color: #333; }
+        ul { list-style-type: square; }
+        .section { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>{{ name }}</h1>
+        <h3>{{ title }}</h3>
+        <p>{{ bio }}</p>
+
+        <div class="section">
+            <h4>Skills</h4>
+            <ul>
+                {% for skill in skills %}
+                    <li>{{ skill }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="section">
+            <h4>Hobbies</h4>
+            <ul>
+                {% for hobby in hobbies %}
+                    <li>{{ hobby }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
