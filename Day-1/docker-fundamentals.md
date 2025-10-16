@@ -142,7 +142,6 @@ docker rm <container_id>
 ```
 app/
  ├─ app.js
- ├─ package.json
  └─ Dockerfile
 ```
 
@@ -165,10 +164,7 @@ FROM node:18-alpine
 WORKDIR /app
 
 # Copy files
-COPY . .
-
-# Install dependencies
-RUN npm install
+COPY app.js .
 
 # Expose port
 EXPOSE 8080

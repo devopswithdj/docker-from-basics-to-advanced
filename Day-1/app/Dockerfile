@@ -2,10 +2,7 @@ FROM node:18-alpine
 
 WORKDIR /app
 
-COPY /app/package*.json ./
-COPY . .
-
-RUN npm install
+COPY app.js .
 
 EXPOSE 8080
 
