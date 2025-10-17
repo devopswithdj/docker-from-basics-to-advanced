@@ -1,0 +1,54 @@
+PS D:\Dhanu\devopswithdj\docker-from-basics-to-advanced\Day-1\python-django-app>    Get-History -Count 100                                  
+
+  Id CommandLine
+  -- -----------
+   1 try { . "c:\Users\nikit\AppData\Local\Programs\Microsoft VS Code\resources\app\out\vs\workbench\contrib\terminal\common\scripts\she...
+   2 docker ps
+   3 docker stop 9087
+   4 docker rm 9087
+   5 docker rmi mynodeapp
+   6 cd .\Day-1\python-django-app\
+   7 pip --version
+   8 python -m venv djangoapp
+   9 .\djangoapp\Scripts\activate
+  10 ls
+  11 python -m pip install Django
+  12 django-admin startproject aboutme_project
+  13 cd .\aboutme_project\
+  14 python .\manage.py aboutme_app
+  15 ls
+  16 clear
+  17 ls
+  18 python manage.py startapp aboutme-app
+  19 python manage.py startapp aboutmeapp
+  20 python .\manage.py runserver
+  21 python .\manage.py runserver
+  22 deactivate
+  23 clear
+  24 docker build -t aboutmeapp .
+  25 cd ..
+  26 clear
+  27 docker build -t aboutmeapp .
+  28 docker images
+  29 docker login
+  30 docker -?
+  31 docker --help
+  32 docker tag --help
+  33 docker tag aboutmeapp:latest firstdjangoaboutmeapp:1.0
+  34 docker images
+  35 docker push devopswithdj/firstdjangoaboutmeapp:1.0
+  36 docker tag aboutmeapp:latest devopswithdj/firstdjangoaboutmeapp:1.0
+  37 docker push devopswithdj/firstdjangoaboutmeapp:1.0
+  38 docker rm firstdjangoaboutmeapp
+  39 docker rmi firstdjangoaboutmeapp
+  40 docker rmi firstdjangoaboutmeapp:1.0
+  41 docker rmi aboutmeapp
+  42 docker images
+  43 docker images -a
+  44 docker images -q
+  45 docker rmi 3e4
+  46 docker rmi devopswithdj/firstdjangoaboutmeapp:1.0
+  47 docker ps -a
+  48 docker stop e78
+  49 docker rm e78
+  50 docker rmi devopswithdj/firstdjangoaboutmeapp:1.0
