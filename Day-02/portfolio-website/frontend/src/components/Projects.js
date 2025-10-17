@@ -1,29 +1,18 @@
-import React from "react";
-import { Grid, Card, CardContent, Typography, Button } from "@mui/material";
+import React from 'react';
 
-const Projects = ({ projects }) => (
-  <Grid container spacing={3} sx={{ p: 4 }}>
-    {projects.map((project, idx) => (
-      <Grid item xs={12} md={6} lg={4} key={idx}>
-        <Card sx={{ borderRadius: 3, boxShadow: 5 }}>
-          <CardContent>
-            <Typography variant="h6">{project.title}</Typography>
-            <Typography variant="body2" sx={{ my: 2 }}>
-              {project.description}
-            </Typography>
-            <Button
-              href={project.link}
-              target="_blank"
-              variant="contained"
-              color="primary"
-            >
-              View Project
-            </Button>
-          </CardContent>
-        </Card>
-      </Grid>
-    ))}
-  </Grid>
-);
-
-export default Projects;
+export default function Projects({projects}){
+  return (
+    <div id="projects" className="section">
+      <h2>Projects</h2>
+      <div className="projects-grid">
+        {projects.map((p, i) => (
+          <div className="card" key={i}>
+            <h3 style={{marginTop:0}}>{p.title}</h3>
+            <p>{p.description}</p>
+            <a href={p.link} target="_blank" rel="noreferrer">View Project</a>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}

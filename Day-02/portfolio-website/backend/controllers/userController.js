@@ -1,4 +1,4 @@
-import { getUserData } from "../processors/userProcessor.js";
+import { getUserData } from '../processors/userProcessor.js';
 
 export const getProfile = (req, res) => {
   try {

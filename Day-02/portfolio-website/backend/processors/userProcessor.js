@@ -1,6 +1,6 @@
-import { userData } from "../models/userModel.js";
+import { userData } from '../models/userModel.js';
 
 export const getUserData = () => {
-  // Additional business logic or data formatting can go here
+  // Place for business logic, formatting, or enrichment
   return userData;
 };

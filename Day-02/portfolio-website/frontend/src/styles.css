@@ -4,6 +4,29 @@ body {
   background-color: #f3f4f6;
 }
 
-button {
-  border-radius: 12px !important;
+.navbar {
+  display:flex;
+  justify-content:space-between;
+  padding:16px 32px;
+  background: linear-gradient(90deg,#ffb86b,#ff4081);
+  color:white;
+  align-items:center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
+
+.hero {
+  height:60vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  color:white;
+  background: linear-gradient(135deg, #ff4081 0%, #673ab7 100%);
+}
+
+.section { padding:48px 24px; }
+.projects-grid { display:flex; gap:20px; flex-wrap:wrap; justify-content:center; }
+.card { background:white; padding:20px; border-radius:12px; width:320px; box-shadow: 0 6px 18px rgba(0,0,0,0.08); }
+.skills { display:flex; gap:8px; flex-wrap:wrap; }
+.skill { background:#e0e7ff; padding:6px 10px; border-radius:999px; }

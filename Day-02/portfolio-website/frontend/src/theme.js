@@ -1,10 +1,10 @@
-import { createTheme } from "@mui/material/styles";
+import { createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
   palette: {
-    primary: { main: "#673ab7" },
-    secondary: { main: "#ff4081" },
-    background: { default: "#f3f4f6" },
+    primary: { main: '#673ab7' },
+    secondary: { main: '#ff4081' },
+    background: { default: '#f3f4f6' },
   },
   typography: {
     fontFamily: "'Poppins', sans-serif",
