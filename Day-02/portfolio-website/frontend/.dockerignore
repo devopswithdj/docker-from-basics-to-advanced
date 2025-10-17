@@ -1,0 +1,26 @@
+# Ignore the local Node.js dependencies
+node_modules
+
+# Ignore common build artifacts
+npm-debug.log
+npm-debug.log.*
+yarn-error.log
+dist
+build
+.cache
+
+# Ignore version control metadata
+.git
+.gitignore
+.gitmodules
+
+# Ignore sensitive environment files
+.env
+.env.local
+
+# Ignore macOS-specific files
+.DS_Store
+
+# Ignore Docker-related files that don't need to be in the image
+Dockerfile
+docker-compose.yml
