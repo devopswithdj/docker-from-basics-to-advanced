@@ -44,16 +44,16 @@ backend/dist/
 backend/logs/
 
 # --- Docker ---
-Dockerfile
-Dockerfile.*
-docker-compose.yml
-docker-compose.*
-.dockerignore
-.docker/
-docker/
-tmp/
-*.tar
-*.gz
+# Dockerfile
+# Dockerfile.*
+# docker-compose.yml
+# docker-compose.*
+# .dockerignore
+# .docker/
+# docker/
+# tmp/
+# *.tar
+# *.gz
 
 # --- Temporary / Cache Files ---
 .cache/
