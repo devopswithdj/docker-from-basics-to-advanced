@@ -2,12 +2,13 @@
 
 ## 🎯 Goal
 By the end of this day, you’ll be able to:
+  
 ✅ Build efficient Docker images  
 ✅ Understand Dockerfile best practices  
 ✅ Tag and version images  
 ✅ Push/pull images from Docker Hub  
-✅ Inspect, clean, and manage images effectively
-⛷️ Portfolio Website - ReactJS, JavaScript and Docker
+✅ Inspect, clean, and manage images effectively  
+✅ Portfolio Website - ReactJS, JavaScript and Docker
 ---
 
 ## 📘 1. Recap of Day 1
