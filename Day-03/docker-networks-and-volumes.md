@@ -106,19 +106,63 @@ docker run -d --name flask_app --network app_network -p 5000:5000 flask-redis-ap
 Visit **http://localhost:5000**  
 🎉 You’ll see visit count increment each time you refresh!
 
+Inspect both containers and check the network - to notice network is app_network
+```bash
+docker inspect <container>
+```
+
 ---
 
 ## 🔒 5. Exposing Ports
 
 To make a container accessible outside Docker:
 ```bash
-docker run -p 8080:80 nginx
+docker run -d -p 8080:80 nginx
 ```
 
 This maps:
 - **8080 (host port)** → **80 (container port)**
 
 💡 Use `EXPOSE 80` inside Dockerfile to indicate which port the container listens on (for documentation, not enforcement).
+
+🪗 Now we have two containers - Lets try connectivity between them to understand the Networks
+
+### Step 1️⃣: List the contaiers running and inspect the contianers to find respective IPs from network
+```bash
+docker ps -a
+docker inspect <container>
+
+--> In my case flask-app - 172.19.0.3, nginx - 172.17.0.2
+```
+
+### Step 2️⃣: Exec into nginx node and install ping
+```bash
+docker exec -it nginx /bin/bash
+
+apt-get update
+
+apt-get install iputils-ping
+```
+
+### Step 3️⃣: Try Hitting flask-app(app_network) from nginx(bridge) (Both are on different networks)
+```bash
+docker exec -it nginx /bin/bash
+
+ping 172.19.0.3  #This might vary for you.
+
+```
+**You must have seen no response from Ping**
+
+### Step 3️4️⃣: Try changing network of nginx to same as flask-app and then ping
+```bash
+docker network disconnect bridge nginx
+docker network connect app_network nginx
+docker exec -it nginx /bin/bash
+ping 172.19.0.3 #IP of flask-app
+```
+**🥳 You will see the response from flask app since they are both on same network**
+
+**This completes the networking concept**
 
 ---
 
