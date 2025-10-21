@@ -153,7 +153,7 @@ ping 172.19.0.3  #This might vary for you.
 ```
 **You must have seen no response from Ping**
 
-### Step 3️4️⃣: Try changing network of nginx to same as flask-app and then ping
+### Step 4️⃣: Try changing network of nginx to same as flask-app and then ping
 ```bash
 docker network disconnect bridge nginx
 docker network connect app_network nginx
@@ -163,6 +163,7 @@ ping 172.19.0.3 #IP of flask-app
 **🥳 You will see the response from flask app since they are both on same network**
 
 **This completes the networking concept**
+
 
 ---
 
