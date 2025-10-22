@@ -198,7 +198,19 @@ docker volume ls
 
 ### Use Volume in Container
 ```bash
-docker run -d --name mysql_db -v my_data:/var/lib/mysql mysql
+docker run -d -e MYSQL_ROOT_PASSWORD=mysql_db_pass --name mysql_db -v my_data:/var/lib/mysql mysql
+```
+**try connecting to above mysql either from local or exec**
+
+```bash
+1) Connect from local - using any Mysql client (ex: local or Dbeaver)
+docker run -d -p 3309:3306 -e MYSQL_ROOT_PASSWORD=mysql_db_pass --name mysql_db -v my_data:/var/lib/mysql mysql
+
+mysql -h 127.0.0.1 -P 3309 -u root -p (if you have mysql-client in local)
+
+2) Docker exec into contianer and run mysql commmand
+
+docker exec -it mysql_db mysql -u root -p
 ```
 
 Now, even if the container is removed, your data in `/var/lib/mysql` persists inside the volume.
@@ -284,6 +296,11 @@ docker system prune -a          # Clean all unused data
 
 - 📘 [Docker Docs — Networking](https://docs.docker.com/network/)
 - 📘 [Docker Docs — Volumes](https://docs.docker.com/storage/volumes/)
+
+## Sample Outputs
+- 📸 [bind mount - nginx](./docker-volumes-bind-mounts.png)
+- 📸 [volumes - mysql](./docker-volumes-demo-mysql.png)
+- 📸 [networks - flask-app](./network-connectivity-between-nginx&flask-app.png)
 
 ---
 

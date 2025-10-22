@@ -235,4 +235,8 @@ docker run -p 8080:80 nginx
 - 🎥 [TechWorld with Nana - Docker for Beginners](https://youtu.be/pg19Z8LL06w)
 - 🧪 [Play with Docker (Online Sandbox)](https://labs.play-with-docker.com/)
 
+
+## Sample Outputs
+- 📸 [assets-Day01](../assets/Day-01/)
+
 ---
